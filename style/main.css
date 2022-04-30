@@ -1,0 +1,179 @@
+:root {
+  --red: #e50914;
+  --black: #000000;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: var(--black);
+  font-family: 'Roboto', sans-serif;
+  color: var(--white);
+}
+
+.container {
+  margin-left: 30px;
+}
+
+.container .menu-logo img {
+  width: 150px;
+}
+
+.logo-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1000;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.logo-container-black {
+  background-color: var(--black);
+}
+
+.menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-nav a {
+  display: block;
+  padding: 10px;
+  color: var(--white);
+  transition: .3s ease-in;
+}
+
+.menu-nav a:hover {
+  color: var(--white);
+  border-bottom: 1px solid var(--red);
+}
+
+/* main movie */
+
+.main-movie {
+  background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)), url('../img/interestelar.gif');
+  min-height: 500px;
+  background-size: cover;
+  background-position: center center;
+  object-fit: contain;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+}
+
+.main-movie .description {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 85%;
+  max-width: 560px;
+  max-height: 140px;
+}
+
+.title {
+  font-size: 48px;
+  /* margin-top: 20%; */
+}
+
+.buttons {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0;
+}
+
+.button {
+  width: 200px;
+  background-color: rgba(0, 0, 0, .5);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button i {
+  margin-right: 8px;
+}
+
+/* Movies List */
+
+h2 {
+  margin: 25px;
+  text-shadow: var(--white);
+
+}
+
+
+
+@media screen and (max-width: 700px) {
+  header .logo-container {
+    position: initial;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  button {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 414px){
+  iframe {
+    width: 414px;
+    height: 233px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .menu-nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  iframe {
+    width: 360px;
+    height: 202px;
+  }
+
+  .buttons {
+    margin: 50px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  iframe {
+    width: 320px;
+    height: 180px;
+  }
+
+  .buttons {
+    margin: 100px 0 0 0;
+  }
+}
